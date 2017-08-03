@@ -1,0 +1,156 @@
+{
+  "fim_policy": {
+    "name": "Core System Files (Amazon Linux) v2.1 FIM Baseline Testing",
+    "description": "This is a FIM policy for Amazon Linux servers and will work with Amazon Linux 2012.03 and higher. This policy includes the standard Amazon Linux directories that should be monitored for security and compliance purposes.\nRecommended for: General system security, PCI-DSS, HIPAA, SANS 20, SOC 2",
+    "platform": "linux",
+    "module": "fim",
+    "group_id": "0714564e320311e690235fbd95bbb36c",
+    "group_name": "cloudpassage",
+    "created_by": "jenksgibbons",
+    "updated_by": "jenksgibbons",
+    "created_at": "2017-08-03T05:30:59.416Z",
+    "updated_at": "2017-08-03T05:30:59.416Z",
+    "template": false,
+    "retired": false,
+    "shared": true,
+    "read_only": false,
+    "used_by": [],
+    "id": "ee7c7e30780c11e7a63c7909e1e40b1e",
+    "url": "https://portal.cloudpassage.com/v1/fim_policies/ee7c7e30780c11e7a63c7909e1e40b1e",
+    "rules": [
+      {
+        "target": "/",
+        "description": "Some kernel files are sometimes stored here",
+        "active": true,
+        "recurse": false,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/bin",
+        "description": "/bin contains commands that may be used by both the system administrator and by users\n",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/boot",
+        "description": "This directory contains everything required for the boot process except configuration files not needed at boot time and the map installer.",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/etc",
+        "description": "The /etc directory hierarchy contains configuration files. \n\n",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/lib",
+        "description": "Contains libraries used by the binaries in /bin and /sbin. This directory sometimes may include a very large number of files, for performance reasons it is suggested that this check is disabled.",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/lib64",
+        "description": "This directory includes additional libraries used by binaries in /bin and /sbin that are specific to a 64-bit architecture.",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/opt",
+        "description": "/opt is reserved for the installation of add-on application software packages and their configuration files.",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [
+          {
+            "pattern": "*halo.log",
+            "description": "The halo.log file is constantly being updated while Halo is running so it is a recommended exclusion.",
+            "inclusion": false
+          },
+          {
+            "pattern": "*store.db",
+            "description": "The store.db file is constantly being updated while Halo is running so it is a recommended exclusion.",
+            "inclusion": false
+          }
+        ],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/root",
+        "description": "This is the superuser's home directory.  If a superuser has critical files in their root home directories that they want to protect then make sure this rule is enabled.",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/sbin",
+        "description": "System binaries. Utilities used for system administration (and other root-only commands) are stored in /sbin, /usr/sbin, and\n/usr/local/sbin.\n\n",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/usr/bin",
+        "description": "User binaries",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      },
+      {
+        "target": "/usr/sbin",
+        "description": "User system binaries",
+        "active": true,
+        "recurse": true,
+        "critical": false,
+        "alert": false,
+        "prelink": false,
+        "patterns": [],
+        "reference_identifiers": []
+      }
+    ],
+    "active": false
+  }
+}
