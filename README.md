@@ -16,8 +16,8 @@ Type: sudo vi /etc/cloudpassage.yaml
 defaults:  
   key_id:   
   secret_key:   
-api_hostname:   api.cloudpassage.com  
-api_port: 443
+  api_hostname: api.cloudpassage.com  
+  api_port: 443
 
 or
 
