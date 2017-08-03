@@ -25,6 +25,11 @@ export HALO_API_KEY=
 export HALO_API_SECRET_KEY=  
 export HALO_API_HOSTNAME=api.cloudpassage.com  
 
+Dependencies
+-
+
+sudo pip install gitpython  
+
 Files
 -
 
