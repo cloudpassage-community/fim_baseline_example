@@ -4,6 +4,25 @@ FIM Baseline Example
 This is sample code and is not supported.  The code will create a Halo server group, move a workload to the group,
 create a FIM policy, and create a FIM baseline.
 
+API Setup
+
+A) Install the CloudPassage SDK
+
+Type: pip install cloudpassage
+Configure the SDK
+Type: sudo vi /etc/cloudpassage.yaml
+defaults:
+key_id: 
+secret_key: 
+api_hostname: api.cloudpassage.com
+api_port: 443
+
+or
+
+export HALO_API_KEY=
+export HALO_API_SECRET_KEY=
+export HALO_API_HOSTNAME=api.cloudpassage.com
+
 Files
 -
 
